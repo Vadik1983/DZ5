@@ -5,7 +5,7 @@
 
 int[] array = GetRandomArray(10, -10, 10);
 Console.WriteLine($"[{String.Join(", ", array)}]");
-SumNumbers();
+SumNumbers(array);
 /////////////////////////////////////////////
 
 int[] GetRandomArray(int size, int minValue, int maxValue)
@@ -18,16 +18,15 @@ int[] GetRandomArray(int size, int minValue, int maxValue)
 	}
 	return result;
 }
-
-int SumNumbers()
+// Находим сумму элементов на нечётных позициях.
+int SumNumbers(int[] array)
 {
     int sum = 0;
-    int i = 0;
-    int num = array[i];
-    for(i = 0; i <= array.Length; i++ )
+    for(int i = 0; i < array.Length; i++ )
     { 
-        if (i != 1 || (i % 2 == 0)) sum = sum + num;
+        if  (i % 2 == 0) sum = sum + array[i];
     }
     Console.Write(sum);
     return(sum);
 }
+// Спасибо за подсказку!!!
