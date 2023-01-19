@@ -4,7 +4,7 @@
 
 int[] array = GetRandomArray(10, 100, 1000);
 Console.WriteLine($"[{String.Join(", ", array)}]");
-EvenNumbers();
+EvenNumbers(array);
 
 /////////////////////////////////////////////
 // Генератор случайных чисел в заданном диапазоне.
@@ -20,9 +20,8 @@ int[] GetRandomArray(int size, int minValue, int maxValue)
 }
 
 // Проверка чисел массива.
-int EvenNumbers()
+int EvenNumbers(int[] array)
 {
-    int length = array.Length;
     int sum = 0;
     for(int i = 0; i < array.Length; i++)
     {
