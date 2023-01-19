@@ -4,51 +4,57 @@
 
 double[] array = GetRandomArray(8, 0, 100);
 Console.WriteLine($"[{String.Join(", ", array)}]");
-//double maxNum = MaxNum(array);
+
+double maxNum = MaxNum(array);
 double minNum = MinNum(array);
+DiffNun(array);
 /////////////////////////////////////////////
 
 
 double[] GetRandomArray(int size, double minValue, double maxValue)
 {
-	double[] result = new double[size];
-	var rnd = new Random();
-	for(double i = 0; i < size; i++)
-	{
-		result[(int)i] = rnd.Next((int)minValue, (int)maxValue);
-	}
-	return result;
-}
-
-
-
-/*double MaxNum(double[] array)
-{ 
-double max = int.MinValue;
-for (int i = 0; i < array.Length; i++)
-{
-    if (array[i] > max)
+    double[] result = new double[size];
+    var rnd = new Random();
+    for (double i = 0; i < size; i++)
     {
-        max = array[i];
+        result[(int)i] = rnd.Next((int)minValue, (int)maxValue);
     }
-
+    return result;
 }
-Console.WriteLine(max);
-return max;
 
-}*/
-
-double MinNum(double[] array)
-{ 
-double min = int.MinValue;
-for (int i = 0; i < array.Length; i++)
+// Находим максимальное значение.
+double MaxNum(double[] array)
 {
-    for (int j = i + 1; j < array.Length; j++)
-    { 
-        if (array[i] < array[j]) min = array[i];
-        else min = array[j];
+    int i = 0;
+    double max = array[i];
+    for (i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max)
+        {
+            max = array[i];
+        }
     }
+    Console.WriteLine(max);
+    return max;
 }
-Console.WriteLine(min);
-return min;
+
+// Находим минимальное значение.
+double MinNum(double[] array)
+{
+    int i = 0;
+    double min = array[i];
+    for (i = 0; i < array.Length; i++)
+    {
+        if (array[i] < min) min = array[i];
+    }
+    Console.WriteLine(min);
+    return min;
+}
+
+// Вычисляем разницу.
+double DiffNun(double[] array)
+{
+    double result = maxNum - minNum;
+    Console.WriteLine($"Result = {result}");
+    return result;
 }
