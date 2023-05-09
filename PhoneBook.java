@@ -7,8 +7,8 @@ public class PhoneBook {
     void add(String numPhone, String lastName){
         map.put(numPhone, lastName);
     }
-    String getByNumPhone(String nunPhone){
-        return nunPhone + " принадлежит: " + map.get(nunPhone);
+    String getByNumPhone(String numPhone){
+        return numPhone + " принадлежит: " + map.get(numPhone);
     }
 
     String getByLastname(String lastName){
