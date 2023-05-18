@@ -25,26 +25,26 @@ public class Main1 {
           Для сортировки использовать TreeMap.
          */
         workersJournaled();
+        Workers.countName();
     }
     private static void workersJournaled(){
         Workers worker = new Workers();
-        worker.addWorker("Иван", "Иванов");
-        worker.addWorker("Светлана", "Петрова");
-        worker.addWorker("Кристина", "Белова");
-        worker.addWorker("Анна", "Мусина");
-        worker.addWorker("Анна", "Крутова");
-        worker.addWorker("Иван", "Юрин");
-        worker.addWorker("Петр", "Лыков");
-        worker.addWorker("Павел", "Чернов");
-        worker.addWorker("Петр", "Чернышов");
-        worker.addWorker("Мария","Федорова");
-        worker.addWorker("Марина", "Светлова");
-        worker.addWorker("Мария", "Савина");
-        worker.addWorker("Мария", "Рыкова");
-        worker.addWorker("Марина","Лугова");
-        worker.addWorker("Анна", "Владимиров");
-        worker.addWorker("Иван", "Мечников");
-        worker.addWorker("Петр", "Петин");
-        worker.addWorker("Иван", "Ежов");
+        worker.addWorker("Иванов","Иван");
+        worker.addWorker("Петрова", "Светлана");
+        worker.addWorker("Белова","Кристина");
+        worker.addWorker("Мусина","Анна");
+        worker.addWorker("Крутова","Анна");
+        worker.addWorker("Юрин","Иван");
+        worker.addWorker("Лыков","Петр");
+        worker.addWorker( "Чернов","Павел");
+        worker.addWorker("Чернышов","Петр");
+        worker.addWorker("Федорова","Мария");
+        worker.addWorker("Светлова","Марина");
+        worker.addWorker( "Савина","Мария");
+        worker.addWorker( "Рыкова","Мария");
+        worker.addWorker("Лугова","Марина");
+        worker.addWorker("Владимиров","Анна");
+        worker.addWorker("Мечников","Иван");
+        worker.addWorker("Петин","Иван");
     }
 }
